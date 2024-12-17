@@ -1,0 +1,379 @@
+/* メッセージページのスタイル */
+.content-area {
+    position: relative;
+    padding-top: var(--header-height);
+    background: #030712;  /* 深色背景 */
+}
+
+/* 内容区域宽度限制 */
+.content-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.entry-content-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 90px;
+    background: linear-gradient(to bottom, #030712 0%, #171717 1000px);  /* 修改渐变起始色为 #030712 */
+    min-height: 1000px;
+}
+
+/* 左右布局样式 */
+.development-section,
+.dx-section,
+.quality-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    margin: 80px 0;
+}
+
+/* 文本内容样式 */
+.text-content {
+    max-width: 1000px;
+    padding-right: 30px;
+}
+
+.text-content h3 {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: white;  /* 文字颜色改为白色 */
+}
+
+.text-block p {
+    font-size: 1.1rem;
+    line-height: 2;
+    letter-spacing: 0.03em;
+    color: white;  /* 文字颜色改为白色 */
+    margin-bottom: 15px;
+}
+
+/* 图片内容样式 */
+.image-content {
+    max-width: 1000px;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-content:hover img {
+    transform: scale(1.05);
+}
+
+/* 子页面的页眉样式 */
+.header {
+    background-color: white !important;
+    border-bottom: 1px solid #212121;
+}
+
+/* 子页面的文字颜色 */
+.header .logo-text,
+.header .nav-menu a,
+.header .dropdown-icon {
+    color: #212121 !important;
+}
+
+/* 子页面的下拉菜单样式 */
+.header .dropdown-menu {
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header .dropdown-menu a {
+    /* color: #212121 !important; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.header .dropdown-menu a:hover {
+    background-color: #212121 !important;
+    color: white !important;
+}
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 500px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    overflow: hidden;
+}
+
+.hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* メッセージ内容 */
+.message-section {
+    max-width: 900px;
+    margin: -50px auto 0;
+    padding: 40px 90px;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.message-content {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 2;
+    color: #666;
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.message-content p {
+    line-height: 2;
+    margin-bottom: 0.25em;
+    font-size: 12px;
+    color: #212121;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* アニメーション */
+[data-aos] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-aos="fade-right"] {
+    transform: translateX(-30px);
+}
+
+[data-aos="fade-left"] {
+    transform: translateX(30px);
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .message-section {
+        padding: 20px;
+    }
+
+    .message-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .message-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .message-header h2 {
+        font-size: 2rem;
+    }
+
+    .message-text p {
+        font-size: 1rem;
+    }
+}
+
+/* 确保下拉菜单可以点击 */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto !important;
+}
+
+/* 签名样式 */
+.signature {
+    text-align: right;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: 0;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.signature .position {
+    margin-bottom: 0.3em;
+    font-size: 12px;
+    line-height: 2;
+    width: fit-content;  /* 宽度适应内容 */
+}
+
+.signature .name {
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.1em;
+    margin-bottom: 0;
+    width: fit-content;  /* 宽度适应内容 */
+}
+
+.signature .eng-name {
+    margin-left: 10px;
+}
+
+/* 修改员工照片 */
+.profile-image {
+    flex: 0 0 400px;  /* 固定宽度为400px */
+    position: relative;
+    height: 500px;  /* 固定高度为500px */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    color: white;
+}
+
+.profile-name h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.profile-name p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .profile-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 400px;  /* 移动端最大宽度 */
+        height: 500px;  /* 保持高度比例 */
+        margin: 0 auto;
+    }
+}
+
+/* 添加图片路径 */
+.profile-image img[src*="fengxinming"] {
+    object-position: center;  /* 调整图片显示位置 */
+}
+
+/* プロフィールセクション */
+.profile-section {
+    background: #030712;  /* 深色背景 */
+    padding: 80px 0;
+    margin-top: 60px;
+}
+
+.profile-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    background: #030712;  /* 确保内容区域也是深色背景 */
+}
+
+/* 左侧图片部分 */
+.profile-image {
+    flex: 0 0 400px;
+    position: relative;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 右侧文字部分 */
+.profile-text {
+    flex: 1;
+    color: white;
+    background: #030712;  /* 确保文字区域也是深色背景 */
+}
+
+.profile-description {
+    background: #030712;  /* 确保描述区域也是深色背景 */
+}
+
+.profile-description p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: white;
+    background: #030712;  /* 确保段落背景也是深色 */
+}
+
+/* 经历部分 */
+.career-history {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: #030712;  /* 确保经历部分也是深色背景 */
+}
+
+.history-item {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.date,
+.description {
+    color: white;  /* 确保文字为白色 */
+    font-size: 12px;
+}

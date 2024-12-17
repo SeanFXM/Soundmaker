@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - 株式会社Tonix Lab</title>
+    <link rel="icon" type="image/png" href="../../images/soundmakerlogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index.html" class="logo-text">株式会社Tonix Lab</a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#about">企業情報<i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../profile/profile.html">会社概要</a></li>
+                            <li><a href="../idea/idea.html">企業理念</a></li>
+                            <li><a href="#message">代表社員メッセージ</a></li>
+                 
+                        </ul>
+                    </li>
+                    <li><a href="../business/business.html">事業紹介</a></li>
+                    <li><a href="../news/news.html">ニュース</a></li>
+                    <li class="dropdown">
+                        <a href="#careers">採用情報<i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../careers/careers.html">正社員採用</a></li>
+                            <li><a href="../part-time/part-time.html">アルバイト採用</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../contact/contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- モバイルメニュー -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li class="mobile-dropdown">
+                <a href="#about">企業情報</a>
+                <ul class="mobile-submenu">
+                    <li><a href="../profile/profile.html">会社概要</a></li>
+                    <li><a href="../idea/idea.html">企業理念</a></li>
+                    <li><a href="#message">代表社員メッセージ</a></li>
+                    <li><a href="#locations">拠点案内</a></li>
+                </ul>
+            </li>
+            <li><a href="../business/business.html">事業紹介</a></li>
+            <li><a href="../news/news.html">ニュース</a></li>
+            <li class="mobile-dropdown">
+                <a href="#careers">採用情報</a>
+                <ul class="mobile-submenu">
+                    <li><a href="../careers/careers.html">正社員採用</a></li>
+                    <li><a href="../part-time/part-time.html">アルバイト採用</a></li>
+                </ul>
+            </li>
+            <li><a href="../contact/contact.html">お問い合わせ</a></li>
+        </ul>
+    </div>
+
+    <!-- パンくずリストとタイトル -->
+    <section class="entry-hero page-hero-section">
+        <div class="entry-hero-container-inner">
+            <div class="hero-section-overlay"></div>
+            <div class="hero-container site-container">
+                <header class="entry-header">
+                    <nav class="breadcrumbs">
+                        <div class="breadcrumb-container">
+                            <span><a href="../../index.html">ホーム</a></span>
+                            <span class="separator">/</span>
+                            <span class="current">お問い合わせ</span>
+                        </div>
+                    </nav>
+                </header>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要内容 -->
+    <div id="primary" class="content-area">
+        <div class="content-container site-container">
+            <main id="main" class="site-main">
+                <div class="content-wrap">
+                    <article class="entry content-bg single-entry">
+                        <div class="entry-content-wrap">
+                            <div class="entry-content single-content">
+                                <!-- お問い合わせフォーム -->
+                                <div class="contact-section">
+                                    <h3 data-aos="fade-up">お問い合わせ</h3>
+                                    <p class="business-hours" data-aos="fade-up" data-aos-delay="100">営業時間：10:30 ~ 18:00</p>
+                                    <p class="business-note" data-aos="fade-up" data-aos-delay="200">（土日、祝日、年末年始を除く）</p>
+
+                                    <form class="contact-form" data-aos="fade-up" data-aos-delay="300">
+                                        <div class="form-row">
+                                            <div class="form-group" data-aos="fade-right" data-aos-delay="400">
+                                                <label for="company">会社名</label>
+                                                <input type="text" id="company" name="company">
+                                            </div>
+                                            <div class="form-group" data-aos="fade-left" data-aos-delay="400">
+                                                <label for="name">担当者<span class="required">*</span></label>
+                                                <input type="text" id="name" name="name" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group" data-aos="fade-right" data-aos-delay="500">
+                                                <label for="email">メールアドレス<span class="required">*</span></label>
+                                                <input type="email" id="email" name="email" required>
+                                            </div>
+                                            <div class="form-group" data-aos="fade-left" data-aos-delay="500">
+                                                <label for="phone">電話番号<span class="required">*</span></label>
+                                                <input type="tel" id="phone" name="phone" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group" data-aos="fade-up" data-aos-delay="600">
+                                            <label for="message">メッセージ<span class="required">*</span></label>
+                                            <textarea id="message" name="message" rows="5" required></textarea>
+                                        </div>
+
+                                        <div class="form-group" data-aos="fade-up" data-aos-delay="700">
+                                            <label for="purpose">確認事項<span class="required">*</span></label>
+                                            <select id="purpose" name="purpose" required>
+                                                <option value="営業·協業を目的としたメールではありません">営業·協業を目的としたメールではありません</option>
+                                                <option value="営業·協業を目的としたメールです。">営業·協業を目的としたメールです。</option>
+                                            </select>
+                                        </div>
+
+                                        <p class="form-note" data-aos="fade-up" data-aos-delay="800"></p>
+
+                                        <div class="submit-group" data-aos="fade-up" data-aos-delay="900">
+                                            <button type="submit" class="submit-button">送信</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Our Company</h4>
+                    <ul>
+                        <li><a href="../profile/profile.html">会社概要</a></li>
+                        <li><a href="../idea/idea.html">企業理念</a></li>
+                        <li><a href="../message/message.html">代表メッセージ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Service</h4>
+                    <ul>
+                        <li><a href="../business/business.html">事業紹介</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our News</h4>
+                    <ul>
+                        <li><a href="../news/news.html">ニュース一覧</a></li>
+                        <li><a href="../careers/careers.html">採用情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connected</h4>
+                    <div class="contact-info">
+                        <a href="../contact/contact.html">お問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 株式会社Tonix Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- スクロールトップボタン -->
+    <button id="scroll-to-top" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../../script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out-cubic',
+            once: true
+        });
+    </script>
+</body>
+</html> 

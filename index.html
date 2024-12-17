@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社Tonix Lab</title>
+    <link rel="icon" type="image/png" href="images/soundmakerlogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">株式会社Tonix Lab</a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#about">企業情報<i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/profile/profile.html">会社概要</a></li>
+                            <li><a href="pages/idea/idea.html">企業理念</a></li>
+                            <li><a href="pages/message/message.html">代表社員メッセージ</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="pages/business/business.html">事業紹介</a></li>
+                    <li><a href="pages/news/news.html">ニュース</a></li>
+                    <li class="dropdown">
+                        <a href="#careers">採用情報<i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pages/careers/careers.html">正社員採用</a></li>
+                            <li><a href="pages/part-time/part-time.html">アルバイト採用</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="pages/contact/contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <select class="language-select">
+                    <option value="ja">日本語</option>
+                    <option value="en">English</option>
+                </select>
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- モバイルメニュー -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li class="mobile-dropdown">
+                <a href="#about">企業情報</a>
+                <ul class="mobile-submenu">
+                    <li><a href="pages/profile/profile.html">会社概要</a></li>
+                    <li><a href="pages/idea/idea.html">企業理念</a></li>
+                    <li><a href="pages/message/message.html">代表社員メッセージ</a></li>
+                    <li><a href="#locations">拠点案内</a></li>
+                </ul>
+            </li>
+            <li><a href="pages/business/business.html">事業紹介</a></li>
+            <li><a href="#news">ニュース</a></li>
+            <li class="mobile-dropdown">
+                <a href="#careers">採用情報</a>
+                <ul class="mobile-submenu">
+                    <li><a href="pages/careers/careers.html">正社員採用</a></li>
+                    <li><a href="pages/part-time/part-time.html">アルバイト採用</a></li>
+                </ul>
+            </li>
+            <li><a href="pages/contact/contact.html">お問い合わせ</a></li>
+        </ul>
+    </div>
+
+    <!-- メインビジュアル -->
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+            <h1>創造力を引き出す、理想の編曲空間を</h1>
+            <p>あなたのアイデアを形にする場所</p>
+            <a href="https://soundmaker.jp" class="cta-button" data-aos="fade-up" data-aos-delay="400">詳しく見る</a>
+        </div>
+    </section>
+
+    <!-- ニュースセクション -->
+    <section class="news-section">
+        <div class="container">
+            <h2 data-aos="fade-up">ニュース</h2>
+            <div class="news-grid">
+                <div class="news-card" data-aos="fade-up" data-aos-delay="200">
+                    <a href="pages/news/articles/holiday-notice.html">
+                        <div class="news-image">
+                            <img src="images/port.webp" alt="の写真">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date">2025.01.15</span>
+                            <h3>海外祝日の連休期間中の営業及び物流休暇のご案内</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="news-card" data-aos="fade-up" data-aos-delay="300">
+                    <a href="pages/news/articles/update.html">
+                        <div class="news-image">
+                            <img src="images/update.webp" alt="更新のお知らせ">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date">2025.01.10</span>
+                            <h3>ホームページ更新のお知らせ</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="news-card" data-aos="fade-up" data-aos-delay="400">
+                    <a href="pages/news/articles/newyear.html">
+                        <div class="news-image">
+                            <img src="images/fujisan.webp" alt="富士山の写真">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date">2025.01.02</span>
+                            <h3>謹賀新年</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="news-more" data-aos="fade-up">
+                <a href="pages/news/news.html" class="more-button">詳しく見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ル・ス一ルについて -->
+    <section class="about-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Tonix Labについて</h2>
+            <div class="about-grid">
+                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                    <a href="pages/idea/idea.html">
+                        <div class="about-image">
+                            <img src="images/produce.png" alt="創造性と革新性">
+                            <div class="about-overlay">
+                                <p class="about-text">創造性と革新性</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                    <a href="pages/idea/idea.html#our-vision">
+                        <div class="about-image">
+                            <img src="images/professional.png" alt="プロフェッショナル">
+                            <div class="about-overlay">
+                                <p class="about-text">プロフェッショナル</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+                    <a href="pages/idea/idea.html#our-values">
+                        <div class="about-image">
+                            <img src="images/quality.jpeg" alt="高品質の製品を提供">
+                            <div class="about-overlay">
+                                <p class="about-text">高品質の製品を提供</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="400">
+                    <a href="pages/idea/idea.html#our-stance">
+                        <div class="about-image">
+                            <img src="images/trust.png" alt="信頼を築き">
+                            <div class="about-overlay">
+                                <p class="about-text">信頼を築き</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 事業紹介 -->
+    <section class="business-section">
+        <div class="container">
+            <h2 data-aos="fade-up">事業紹介</h2>
+            <div class="business-grid">
+                <div class="business-card" data-aos="fade-up" data-aos-delay="100">
+                    <a href="pages/business/business.html">
+                        <div class="business-image">
+                            <img src="images/business_main.png" alt="製品開発 販売事業">
+                            <div class="business-overlay">
+                                <h3>製品開発　販売事業</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Our Company</h4>
+                    <ul>
+                        <li><a href="pages/profile/profile.html">会社概要</a></li>
+                        <li><a href="pages/idea/idea.html">企業理念</a></li>
+                        <li><a href="pages/message/message.html">代表メッセージ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Service</h4>
+                    <ul>
+                        <li><a href="pages/business/business.html">事業紹介</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our News</h4>
+                    <ul>
+                        <li><a href="pages/news/news.html">ニュース一覧</a></li>
+                        <li><a href="pages/careers/careers.html">採用情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connected</h4>
+                    <div class="contact-info">
+                        <a href="pages/contact/contact.html">お問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 株式会社Tonix Lab All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- Jarallax for parallax effects -->
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out-cubic',
+            once: true
+        });
+    </script>
+
+    <!-- スクロールトップボタン -->
+    <button id="scroll-to-top" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+</html> 

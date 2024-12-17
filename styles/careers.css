@@ -1,0 +1,74 @@
+.careers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.page-subtitle {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.job-details {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.detail-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.detail-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+}
+
+.label {
+    font-weight: bold;
+    color: #333;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.content li:before {
+    content: "■";
+    position: absolute;
+    left: 0;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .detail-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .label {
+        background: #f5f5f5;
+        padding: 10px;
+    }
+} 

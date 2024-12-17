@@ -1,0 +1,196 @@
+/* 公司概要页面样式 */
+.content-area {
+    position: relative;
+    padding-top: var(--header-height);
+    background: #fff;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content-wrap {
+    padding-top: 60px;
+}
+
+.company-section {
+    margin-bottom: 80px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #212121;
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 15px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.subtitle {
+    display: block;
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.info-table {
+    margin: 30px 0;
+}
+
+.info-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #eee;
+}
+
+.info-table td {
+    padding: 20px;
+    border: 1px solid #eee;
+    line-height: 1.6;
+}
+
+.info-table td:first-child {
+    width: 200px;
+    background: #f8f9fa;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.organization-chart {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.organization-chart img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .info-table td:first-child {
+        width: 120px;
+    }
+
+    .info-table td {
+        padding: 10px;
+    }
+}
+
+/* 子页面的页眉样式 */
+.header {
+    background-color: white !important;
+    border-bottom: 1px solid #212121;
+}
+
+/* 子页面的文字颜色 */
+.header .logo-text,
+.header .nav-menu a,
+.header .dropdown-icon {
+    color: #212121 !important;
+}
+
+/* 子页面的下拉菜单样式 */
+.header .dropdown-menu {
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header .dropdown-menu a {
+    color: #212121 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header .dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+/* 下拉菜单悬停效果 */
+.header .dropdown-menu a:hover {
+    background-color: #212121 !important;
+    color: white !important;
+}
+
+/* 确保页眉文字为白色 */
+.logo-text,
+.nav-menu a,
+.language-select,
+.search-btn,
+.mobile-menu-toggle {
+    color: white !important;
+}
+
+/* 下拉图标颜色 */
+.dropdown-icon {
+    color: white !important;
+}
+
+/* 语言选择器边框颜色 */
+.language-select {
+    border: 1px solid var(--text-color) !important;
+}
+
+/* 下拉菜单样式 */
+.dropdown-menu {
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.dropdown-menu li a {
+    color: #333;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* 移动端菜单样式 */
+.mobile-menu {
+    background-color: white !important;
+}
+
+.mobile-menu a {
+    color: var(--text-color) !important;
+}
+
+.mobile-submenu {
+    background-color: #f8f9fa !important;
+}
+
+/* 表格悬停效果 */
+.info-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.info-table td:first-child {
+    position: relative;
+}
+
+.info-table td:first-child::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 70%;
+    background-color: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.info-table tr:hover td:first-child::after {
+    opacity: 1;
+}
+
+/* 确保下拉菜单可以点击 */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto !important;
+}

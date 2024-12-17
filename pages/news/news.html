@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ニュース - 株式会社Tonix Lab</title>
+    <link rel="icon" type="image/png" href="../../images/soundmakerlogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../../index.html" class="logo-text">株式会社Tonix Lab</a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#about">企業情報<i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../profile/profile.html">会社概要</a></li>
+                            <li><a href="../idea/idea.html">企業理念</a></li>
+                            <li><a href="../message/message.html">代表社員メッセージ</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="../business/business.html">事業紹介</a></li>
+                    <li><a href="../news/news.html">ニュース</a></li>
+                    <li class="dropdown">
+                        <a href="#careers">採用情報<i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../careers/careers.html">正社員採用</a></li>
+                            <li><a href="../part-time/part-time.html">アルバイト採用</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../contact/contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- モバイルメニュー -->
+    <div class="mobile-menu" id="mobile-menu">
+        <!-- ... 移动端菜单内容 ... -->
+    </div>
+
+    <!-- 主要内容 -->
+    <div id="primary" class="content-area">
+        <div class="content-container site-container">
+            <main id="main" class="site-main" role="main">
+                <div class="content-wrap">
+                    <article class="entry content-bg single-entry">
+                        <div class="entry-content-wrap">
+                            <div class="entry-content single-content">
+                                <!-- ニュース一覧 -->
+                                <h2 class="section-title">ニュース一覧</h2>
+                                <div class="news-grid">
+                                    <div class="news-card" data-aos="fade-up" data-aos-delay="100">
+                                        <a href="articles/holiday-notice.html">
+                                            <div class="news-image">
+                                                <img src="../../images/port.webp" alt="港の写真">
+                                            </div>
+                                            <div class="news-content">
+                                                <span class="news-date">2025.01.15</span>
+                                                <h3>海外祝日の連休期間中の営業及び物流休暇のご案内</h3>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="news-card" data-aos="fade-up" data-aos-delay="200">
+                                        <a href="articles/update.html">
+                                            <div class="news-image">
+                                                <img src="../../images/update.webp" alt="更新のお知らせ">
+                                            </div>
+                                            <div class="news-content">
+                                                <span class="news-date">2025.01.10</span>
+                                                <h3>ホームページ更新のお知らせ</h3>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="news-card" data-aos="fade-up" data-aos-delay="300">
+                                        <a href="articles/newyear.html">
+                                            <div class="news-image">
+                                                <img src="../../images/fujisan.webp" alt="富士山の写真">
+                                            </div>
+                                            <div class="news-content">
+                                                <span class="news-date">2025.01.02</span>
+                                                <h3>謹賀新年</h3>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 分页按钮 -->
+                                <div class="pagination">
+                                    <a href="#" class="page-number current">1</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <!-- 添加空隙 -->
+                <div style="height: 100px;"></div>
+            </main>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Our Company</h4>
+                    <ul>
+                        <li><a href="../profile/profile.html">会社概要</a></li>
+                        <li><a href="../idea/idea.html">企業理念</a></li>
+                        <li><a href="../message/message.html">代表メッセージ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Service</h4>
+                    <ul>
+                        <li><a href="../business/business.html">事業紹介</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our News</h4>
+                    <ul>
+                        <li><a href="../news/news.html">ニュース一覧</a></li>
+                        <li><a href="../careers/careers.html">採用情報</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connected</h4>
+                    <div class="contact-info">
+                        <a href="../contact/contact.html">お問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 株式会社Tonix Lab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- スクロールトップボタン -->
+    <button id="scroll-to-top" class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="../../script.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out-cubic',
+            once: true
+        });
+    </script>
+</body>
+</html> 

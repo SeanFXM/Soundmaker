@@ -1,0 +1,133 @@
+/* アルバイト採用ページのスタイル */
+.content-area {
+    position: relative;
+    padding-top: var(--header-height);
+    background: #fff;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content-wrap {
+    padding-top: 60px;
+}
+
+/* 子页面的页眉样式 */
+.header {
+    background-color: white !important;
+    border-bottom: 1px solid #212121;
+}
+
+/* 子页面的文字颜色 */
+.header .logo-text,
+.header .nav-menu a,
+.header .dropdown-icon {
+    color: #212121 !important;
+}
+
+/* 子页面的下拉菜单样式 */
+.header .dropdown-menu {
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header .dropdown-menu a {
+    color: #212121 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.header .dropdown-menu a:hover {
+    background-color: #212121 !important;
+    color: white !important;
+}
+/* アルバイト採用セクション */
+.part-time-section {
+    margin-bottom: 80px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 15px;
+    border-left: 4px solid var(--primary-color);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .content-wrap {
+        padding-top: 40px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* 确保下拉菜单可以点击 */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto !important;
+}
+
+/* 主内容区域样式 */
+.content-area {
+    padding-top: var(--header-height);
+    min-height: calc(100vh - var(--header-height));
+    background-color: #f8f9fa;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* 部分标题样式 */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+/* 无招聘信息样式 */
+.no-recruitment {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.no-recruitment p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .content-container {
+        padding: 40px 20px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .no-recruitment {
+        padding: 50px 20px;
+    }
+
+    .no-recruitment p {
+        font-size: 1.1rem;
+    }
+} 

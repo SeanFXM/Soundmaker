@@ -1,0 +1,504 @@
+/* 事業紹介ページのスタイル */
+.content-area {
+    position: relative;
+    padding-top: var(--header-height);
+    background: #fff;
+}
+
+/* 导航菜单基础样式 */
+body .header .nav-menu a,
+body .header .logo-text,
+body .header .dropdown-icon {
+    color: #212121 !important;
+}
+
+/* 下拉菜单基础样式 */
+body .header .dropdown-menu {
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 下拉菜单文字样式 */
+body .header .dropdown-menu a {
+    color: #212121 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body .header .dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+/* 下拉菜单悬停效果 */
+body .header .dropdown-menu a:hover,
+body .header .dropdown-menu a:focus {
+    background-color: #212121 !important;
+    color: white !important;
+}
+
+/* 确保下拉菜单可以点击 */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto !important;
+}
+
+/* 业务内容样式 */
+.content-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.wp-block-cover {
+    position: relative;
+    height: 400px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+.wp-block-cover__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.wp-block-cover__image-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wp-block-cover__inner-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.wp-block-cover__inner-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+    color: white !important;
+}
+
+.wp-block-cover__inner-container h2:nth-child(2) {
+    font-size: 2rem;
+    animation-delay: 0.3s;
+}
+
+/* 内容区域宽度限制 */
+.content-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.entry-content-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 90px;
+}
+
+/* 文本内容样式 - 简化版 */
+.text-content {
+    max-width: 45%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.text-content h3 {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    margin: 0 0 20px 0;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* 删除 .text-block 的背景和边框样式 */
+.text-block {
+    padding: 0;  /* 移除内边距 */
+    background: none;  /* 移除背景 */
+    border: none;  /* 移除边框 */
+}
+
+.text-block p {
+    font-size: 1.1rem;
+    line-height: 2;
+    letter-spacing: 0.03em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.text-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* 图片内容样式 */
+.image-content {
+    max-width: 450px;
+    height: 450px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-wrapper {
+    width: 450px;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.image-content img {
+    width: 450px;
+    height: 450px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+    border-radius: 20px;
+}
+
+.image-content:hover img {
+    transform: scale(1.05);
+}
+
+/* 动画效果 */
+[data-aos] {
+    transition-duration: 1000ms !important;
+}
+
+[data-aos="fade-up"] {
+    transform: translateY(50px);
+}
+
+[data-aos="fade-right"] {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+[data-aos="fade-left"] {
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+[data-aos].aos-animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* 左右布局样式 */
+.development-section,
+.dx-section,
+.quality-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin: 80px 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .development-section,
+    .dx-section,
+    .quality-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .text-content,
+    .image-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .image-content {
+        height: 300px;
+    }
+
+    .text-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .wp-block-cover {
+        height: 300px;
+    }
+
+    .wp-block-cover__inner-container h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* 全ての事業セクションの画像サイズを統一 */
+.image-wrapper img {
+    width: 450px;
+    height: 450px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+/* DX化セクションの画像を上下中央揃えに */
+.dx-section .image-wrapper img {
+    object-position: center;
+}
+
+/* 第一张和第三张图片使用cover模式填充 */
+.development-section .image-wrapper img,
+.quality-section .image-wrapper img {
+    object-fit: cover; /* 改为cover模式，确保填充满整个区域 */
+    object-position: center; /* 确保图片居中显示 */
+}
+
+/* DX化（第二张）图片保持原样 */
+.dx-section .image-wrapper img {
+    object-fit: contain; /* 保持contain模式 */
+    object-position: center;
+}
+
+/* DX化（第二张）图片的容器添加白色背景 */
+.dx-section .image-wrapper {
+    width: 450px;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #ffffff; /* 添加纯白色背景 */
+}
+
+.dx-section .image-wrapper img {
+    object-fit: contain;
+    object-position: center;
+    background-color: #ffffff; /* 图片本身也添加白色背景以确保完全覆盖 */
+}
+
+/* フッターのスタイル */
+.footer {
+    background-color: #E6E6FA; /* 浅紫色背景 */
+    padding: 60px 0 20px;
+    margin-top: 80px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-section h4 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #6B5B95; /* 深紫色下划线 */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #6B5B95;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #666;
+    margin-right: 15px;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #6B5B95;
+}
+
+.contact-info {
+    color: #666;
+}
+
+.contact-info a {
+    color: #6B5B95;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-bottom p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin: 0 0 30px 0;
+        text-align: center;
+    }
+
+    .footer-section h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* 如果还是不效以尝试添加这个更强的选择器 */
+.header .dropdown-menu > li > a:hover,
+.header .dropdown-menu > li > a:focus,
+.header .dropdown-menu > li.show > a {
+    background-color: #212121 !important;
+    color: white !important;
+}
+
+/* 子页面的导航菜单文字颜色 */
+.content-area ~ .header .nav-menu a {
+    color: #212121 !important;
+}
+
+/* 子页面的下拉菜单样式 */
+.content-area ~ .header .dropdown-menu {
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 子页面的下拉菜单文字颜色 */
+.content-area ~ .header .dropdown-menu a {
+    color: #212121 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* 移除最后一项的底部边框 */
+.content-area ~ .header .dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+/* 下拉菜单悬停效果 */
+.content-area ~ .header .dropdown-menu a:hover,
+.content-area ~ .header .dropdown-menu a:focus {
+    background-color: #212121 !important;
+    color: white !important;
+}
+
+/* 子页面的导航菜单样式 - 增加选择器特异性 */
+body .content-area ~ .header .nav-menu a,
+body .content-area ~ .header .dropdown-icon {
+    color: #212121 !important;
+}
+
+/* 子页面的下拉菜单样式 - 增加选择器特异性 */
+body .content-area ~ .header .dropdown-menu {
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 子页面的下拉菜单链接样式 - 增加选择器特异性 */
+body .content-area ~ .header .dropdown-menu a {
+    color: #212121 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* 最后一个菜单项移除边框 */
+body .content-area ~ .header .dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+/* 下拉菜单悬停效果 - 增加选择器特异性 */
+body .content-area ~ .header .dropdown-menu a:hover,
+body .content-area ~ .header .dropdown-menu a:focus {
+    background-color: #212121 !important;
+    color: white !important;
+}
+
+/* 子页面的导航菜单文字颜色 */
+body .header .nav-menu a,
+body .header .dropdown-icon {
+    color: #212121 ;  /* 导航菜单文字为黑色 */
+}
+
+/* 子页面的下拉菜单样式 */
+body .header .dropdown-menu {
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* 子页面的下拉菜单文字颜色 */
+body .header .dropdown-menu a {
+    color: #212121 ;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* 下拉菜单悬停效果 */
+body .header .dropdown-menu a:hover,
+body .header .dropdown-menu a:focus {
+    background-color: #212121 !important;
+    color: white !important;
+}
+
+/* 修改选择器的优先级，确保样式生效 */
+.content-area ~ .header .dropdown-menu a,
+.header .dropdown-menu a {
+    color: #212121 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* 如果还是不生效，可以尝试添加更具体的样式 */
+.dropdown-menu > li > a {
+    color: #212121 !important;
+}

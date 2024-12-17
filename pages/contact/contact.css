@@ -1,0 +1,202 @@
+/* お問い合わせページのスタイル */
+.content-area {
+    position: relative;
+    padding-top: var(--header-height);
+    background: #fff;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content-wrap {
+    padding-top: 60px;
+}
+
+/* 子页面的页眉样式 */
+.header {
+    background-color: white !important;
+    border-bottom: 1px solid #212121;
+}
+
+/* パンくずリストとタイトル */
+.entry-hero {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+.entry-hero-container-inner {
+    position: relative;
+}
+
+.breadcrumbs {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.breadcrumbs a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumbs .separator {
+    margin: 0 10px;
+    color: #999;
+}
+
+.breadcrumbs .current {
+    color: #666;
+}
+
+/* お問い合わせフォーム */
+.contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-section h3 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.business-hours,
+.business-note {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    margin-top: 40px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.required {
+    color: #ff4444;
+    margin-left: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.form-note {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 20px 0;
+}
+
+.submit-group {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.submit-button {
+    padding: 15px 60px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-section {
+        padding: 20px;
+    }
+}
+
+/* 子页面的页眉样式 */
+.header {
+    background-color: white !important;
+    border-bottom: 1px solid #212121;
+}
+
+/* 子页面的文字颜色 */
+.header .logo-text,
+.header .nav-menu a,
+.header .dropdown-icon {
+    color: #212121 !important;
+}
+
+/* 子页面的下拉菜单样式 */
+.header .dropdown-menu {
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header .dropdown-menu a {
+    color: #212121 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header .dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+/* 下拉菜单悬停效果 */
+.header .dropdown-menu a:hover {
+    background-color: #212121 !important;
+    color: white !important;
+}
+
+/* 确保下拉菜单可以点击 */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto !important;
+} 

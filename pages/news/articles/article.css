@@ -1,0 +1,224 @@
+/* 文章页面样式 */
+.content-area {
+    padding-top: var(--header-height);
+    background: #fff;
+}
+
+/* 子页面的页眉样式 */
+.header {
+    background-color: white !important;
+    border-bottom: 1px solid #212121;
+}
+
+/* 子页面的文字颜色 */
+.header .logo-text,
+.header .nav-menu a,
+.header .dropdown-icon {
+    color: #212121 !important;
+}
+
+/* 子页面的下拉菜单样式 */
+.header .dropdown-menu {
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header .dropdown-menu a {
+    /* color: #212121 !important; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header .dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+/* 下拉菜单悬停效果 */
+.header .dropdown-menu a:hover {
+    background-color: #212121 !important;  /* 悬停时背景变黑色 */
+    color: white !important;  /* 悬停时文字变白色 */
+}
+
+/* 确保下拉菜单可以点击 */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto !important;
+}
+
+/* 添加淡蓝色背景和居中样式 */
+.entry-content-wrap {
+    max-width: 900px;  /* 增加宽度以适应左右延长 */
+    margin: 0 auto;
+    padding: 40px 90px;  /* 左右内边距增加到90px */
+    background-color: rgba(240, 245, 255, 0.5);
+    border-radius: 10px;
+}
+
+/* パンくずリスト */
+.breadcrumbs {
+    padding: 20px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.breadcrumbs a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumbs .separator {
+    margin: 0 10px;
+    color: #999;
+}
+
+.breadcrumbs .current {
+    color: #666;
+}
+
+/* 文章标题 */
+.article-header {
+    margin-bottom: 40px;
+}
+
+.article-title {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.article-meta {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 文章内容 */
+.article-content {
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* 文章图片统一样式 */
+.article-image {
+    width: 80%;
+    margin: 30px auto 50px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;  /* 统一图片比例为16:9 */
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* 确保图片填充整个容器 */
+    object-position: center 20%;  /* 调整图片显示位置，让山顶显示出来 */
+    display: block;
+}
+
+/* 特定图片的位置调整 */
+.article-image img[src*="newyear"] {
+    object-position: center 10%;  /* 为富士山图片特别调整位置 */
+}
+
+/* 调整图片位置 */
+.article-image[style*="margin: -5px"] {
+    margin: 30px auto 50px auto !important;  /* 覆盖内联样式 */
+}
+
+.article-content p {
+    margin-bottom: 20px;
+}
+
+.article-signature {
+    text-align: right;
+    color: var(--primary-color);
+    margin-top: 40px;
+    font-weight: 500;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .article-title {
+        font-size: 1.5rem;
+    }
+
+    .article-content {
+        font-size: 0.95rem;
+    }
+
+    .entry-content-wrap {
+        padding: 20px;  /* 移动端减小内边距 */
+        margin: 0 15px;  /* 移动端左右留出空间 */
+    }
+}
+
+/* 文章导航按钮 */
+.article-navigation {
+    display: flex;
+    justify-content: space-between;  /* 两端对齐 */
+    margin-top: 60px;  /* 与文章内容保持距离 */
+    padding-top: 20px;  /* 上方内边距 */
+    border-top: 1px solid rgba(0, 0, 0, 0.1);  /* 上方分隔线 */
+}
+
+.prev-article,
+.next-article {
+    display: inline-flex;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+/* 确保即使只有一个按钮，也保持在正确的位置 */
+.article-navigation:has(.prev-article:only-child) {
+    justify-content: flex-start;  /* 只有前の記事时靠左 */
+}
+
+.article-navigation:has(.next-article:only-child) {
+    justify-content: flex-end;  /* 只有次の記事时靠右 */
+}
+
+.prev-article i,
+.next-article i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.prev-article span,
+.next-article span {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 10px;
+}
+
+.prev-article:hover {
+    background-color: #f8f9fa;
+    transform: translateX(-5px);
+}
+
+.next-article:hover {
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+}
+
+/* 下拉菜单样式 */
+.dropdown-menu {
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.dropdown-menu li a {
+    color: #333;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #333;
+    color: #fff;
+} 

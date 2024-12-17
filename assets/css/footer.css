@@ -1,0 +1,101 @@
+/* グローバルフッターのスタイル */
+.footer {
+    background-color: #1a1a1a;  /* 黑色背景 */
+    padding: 60px 0 20px;
+    color: #B8B5E1;  /* 浅紫色文字 */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-section h4 {
+    color: #B8B5E1;  /* 浅紫色标题 */
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;  /* 为下划线定位 */
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;  /* 调整下划线位置 */
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #B8B5E1;  /* 浅紫色下划线 */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #B8B5E1;  /* 浅紫色链接 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffffff;  /* 悬停时变为白色 */
+}
+
+.footer-section .contact-info a {
+    color: #B8B5E1;  /* 浅紫色联系方式链接 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section .contact-info a:hover {
+    color: #ffffff;  /* 悬停时变为白色 */
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;  /* 深色分隔线 */
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #B8B5E1;  /* 浅紫色版权信息 */
+    margin: 0;
+    font-size: 14px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-section {
+        margin: 0 0 30px 0;
+        text-align: center;
+    }
+
+    .footer-section h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+} 
